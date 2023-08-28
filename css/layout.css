@@ -17,6 +17,10 @@ header .top {
 }
 
 header .top .inner {
+  display: flex;
+}
+
+header .top .inner {
   height: 100%;
   background-color: #3094ff;
 }

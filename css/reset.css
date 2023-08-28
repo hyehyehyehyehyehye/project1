@@ -132,11 +132,17 @@ html {
 }
 
 body {
-  font-family: "Pretendard", sans-serif;
+  font-family: "NBG", "나눔바른고딕", "Malgun Gothic", "맑은 고딕", Dotum,
+    "돋움", sans-serif;
   color: var(--text_1);
   font-size: 1.6rem;
 }
 
 a {
   text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
 }

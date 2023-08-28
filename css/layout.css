@@ -14,15 +14,26 @@ header .top {
   width: 100%;
   height: 46px;
   background-color: #81beff;
-}
-
-header .top .inner {
-  display: flex;
+  padding-top: 12px;
 }
 
 header .top .inner {
   height: 100%;
   background-color: #3094ff;
+  display: flex;
+  position: relative;
+}
+header .top .inner .user_set ul {
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+header .top .inner .user_set li {
+  padding: 0 2rem;
+}
+
+header .top .inner .user_set li a {
+  font-size: 13px;
 }
 
 header .bottom {

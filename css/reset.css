@@ -1,6 +1,4 @@
 @charset "utf-8";
-/* http://meyerweb.com/eric/tools/css/reset/ */
-/* v1.0 | 20080212 */
 
 html,
 body,
@@ -74,6 +72,7 @@ td {
 }
 body {
   line-height: 1;
+  background: transparent;
 }
 ol,
 ul {
@@ -116,11 +115,13 @@ table {
   box-sizing: border-box;
 }
 :root {
-  --primary: #465802;
-  --secondary: #f13005;
-  --text_1: #333;
-  --text_2: #666;
-  --background: #fff;
+  --primary: #ee0700;
+  --secondary: #2fa298;
+  --tertiary: #ef6266;
+  --text_1: #44465c;
+  --text_2: #707377;
+  --text_3: #3a3a4a;
+  --background: #f6f6f6;
 }
 html {
   overflow-y: scroll;
@@ -132,17 +133,60 @@ html {
 }
 
 body {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #6c6d73;
+  font-weight: normal;
   font-family: "NBG", "나눔바른고딕", "Malgun Gothic", "맑은 고딕", Dotum,
     "돋움", sans-serif;
-  color: var(--text_1);
-  font-size: 1.6rem;
+  font-weight: 400;
+  position: relative;
 }
 
 a {
   text-decoration: none;
+  color: var(--text_2);
 }
 
 a:hover {
   color: red;
   text-decoration: underline;
+}
+
+.skip_menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 24px;
+  text-decoration: none;
+  transform: translateY(-100%);
+  transition: 0.3s;
+}
+
+.skip_menu:focus {
+  transform: translateY(0%);
+}
+
+button {
+  overflow: visible;
+  cursor: pointer;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 1em;
+  line-height: 1.15;
+  outline-color: blue;
+  outline-offset: -0.5px;
+}
+
+.font_reset {
+  word-spacing: 0 !important;
+  letter-spacing: -0.05rem !important;
+  font-size: 1.5rem !important;
+  font-family: "NBG", "나눔바른고딕", "Malgun Gothic", "맑은 고딕", Dotum,
+    "돋움", sans-serif;
 }

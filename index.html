@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>국민건강보험</title>
+    <title>국민건강보험_1</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/font.css">
-    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico">
 </head>
 <body>
+    <div class="go_skip">
+        <div class="main_search">
+            <a href="#main" class="skip_menu">본문 바로가기</a>
+        </div>
+        <div class="main_gnb">
+            <a href="#gnb" class="skip_menu">본문 바로가기</a>
+        </div>
+    </div>
     <div class="warp">
         <header>
             <div class="top">
@@ -17,14 +25,15 @@
                     <div class="control">
                         <span class="zoom">
                             <em>화면</em>
-                            <button class="in"></button>
-                            <button class="out"></button>
+                            <button class="btn-increase" type="button">화면 확대</button>
+                            <button class="btn-decrease" type="button">화면 축소</button>
                         </span>
                         <span class="sound">
                             <em>소리</em>
-                            <button class="in"></button>
-                            <button class="out"></button>
-                            <button class="default_sound"></button>
+                            <button class="btn-increase" type="button">소리 확대</button>
+                            <button class="btn-decrease" type="button">소리 축소</button>
+                            <button class="default_sound" type="button">음성켜기</button>
+                            <button class="default_mute" type="button">음성끄기</button>
                         </span>
                     </div>
                     <div class="user_set">
@@ -33,16 +42,71 @@
                             <li><a href="#">회원가입</a></li>
                             <li><a href="#">인증서안내</a></li>
                             <li><a href="#">전체메뉴</a></li>
-                            <li><a href="#">Language</a></li>
-                            <li><a href="#">분야별업무사이트</a></li>
+                            <li>
+                                <a href="#">Language</a>
+                                <button class="default" type="button">Language</button>
+                                <div class="lag_textbox">
+                                    <ul class="lag_list">
+                                        <li class="eng"><a href="#">English</a></li>
+                                        <li class="ch"><a href="#">中文</a></li>
+                                        <li class="jp"><a href="#">日本</a></li>
+                                        <li class="viet"><a href="#">Tiếng Việt</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">분야별업무사이트</a>
+                                <button class="default" type="button">part_web</button>
+                                <div class="part_web_textbox">
+                                    <ul class="part_web_list">
+                                        <li><a href="#">
+                                                사회보험
+                                                <br>
+                                                통합징수 포털
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                노인장기
+                                                <br>
+                                                요양보험
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                요양기관
+                                                <br>
+                                                정보마당
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                EDI
+                                                <br>
+                                                서비스
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                건강관리
+                                                <br>
+                                                포털시스템
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                건강보험자료
+                                                <br>
+                                                공유서비스
+                                            </a>
+                                        </li>
+                                    </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="bottom">
                 <div class="inner">
-                    <div class="logo"></div>
-                    <nav class="gnb_dep1">
+                    <div class="logo">
+                        <a href="index.html">h-well 국민건강보험</a>
+                    </div>
+                    <nav class="gnb_dep1" id="gnb">
                         <ul>
                             <li>
                                 <a href="#">민원여기요</a>
@@ -110,6 +174,13 @@
                                     <!-- //dep2-5 -->
                             </li>
                         </ul>
+                        <ul>
+                            <li><a href="#">자주 찾는 메뉴</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">지사찾기</a></li>
+                            <li><a href="#">검진기관찾기</a></li>
+                            <li><a href="#">병(의)원찾기</a></li>
+                        </ul>
                 </div>
                 </li>
                 </ul>
@@ -118,7 +189,7 @@
     </div>
     </header>
     <main>
-        <div class="main_warp">
+        <div class="main_warp" id="main">
             <div class="main_search">
                 <div class="inner"></div>
             </div>

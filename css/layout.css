@@ -47,6 +47,7 @@ header .top .inner .control em {
   font-size: 13px;
   margin-right: 4px;
 }
+/* button */
 header .top .inner .control button {
   width: 20px;
   height: 20px;
@@ -62,7 +63,6 @@ header .top .inner .control .btn-decrease {
 }
 
 /* sound */
-
 header .top .inner .control .default_sound {
   background: url(../img/btn/btn-sound.png);
 }
@@ -70,22 +70,23 @@ header .top .inner .control .default_mute {
   display: none;
   background: url(../img/btn/btn-mute.png);
 }
-header .top .inner .user_set {
+/* user_set */
+.user_set {
   float: right;
   padding-top: 1px;
 }
-header .top .inner .user_set ul.dep1 {
+.user_set ul.dep1 {
   margin: 0;
   padding: 0;
 }
-header .top .inner .user_set .dep1 > li {
+.user_set .dep1 > li {
   float: left;
   margin-left: 20px;
   padding-left: 20px;
   position: relative;
 }
 
-header .top .inner .user_set .dep1 > li::before {
+.user_set .dep1 > li::before {
   width: 1px;
   height: 14px;
   background-color: #e1e1e1;
@@ -94,23 +95,23 @@ header .top .inner .user_set .dep1 > li::before {
   left: 0;
   content: "";
 }
-header .top .inner .user_set .dep1 > li:first-child::before {
+.user_set .dep1 > li:first-child::before {
   display: none;
 }
-header .top .inner .user_set .dep1 > li > a {
+.user_set .dep1 > li > a {
   font-size: 13px;
 }
-header .top .inner .user_set .dep1 > li button {
+.user_set .dep1 > li button {
   background: url(../img/arrow/arrow-navy-8x6.png) no-repeat right;
   padding-right: 15px;
   text-indent: -999999999px;
 }
-header .top .inner .user_set .dep1 > li button.on {
+.user_set .dep1 > li button.on {
   background: url(../img/arrow/arrow-navy-8x6-on.png) no-repeat right;
   padding-right: 15px;
   text-indent: -999999999px;
 }
-header .top .inner .user_set .lag_textbox {
+.user_set .lag_textbox {
   width: 130px;
   background: #fff;
   padding: 9px 19px;
@@ -118,19 +119,19 @@ header .top .inner .user_set .lag_textbox {
   position: absolute;
   top: 35px;
   border-radius: 10px;
-  /* display: none; */
+  display: none;
 }
-header .top .inner .user_set .lag_textbox ul {
+.user_set .lag_textbox ul {
   padding: 8px 0;
 }
-header .top .inner .user_set .lag_textbox ul li {
+.user_set .lag_textbox ul li {
   line-height: 33px;
 }
-header .top .inner .user_set .lag_textbox ul li a {
+.user_set .lag_textbox ul li a {
   color: var(--text_1);
 }
 
-header .top .inner .user_set .part_web_textbox {
+.user_set .part_web_textbox {
   width: 360px;
   background: #fff;
   padding: 9px 19px;
@@ -139,27 +140,27 @@ header .top .inner .user_set .part_web_textbox {
   top: 35px;
   right: 0;
   border-radius: 10px;
-  /* display: none; */
+  display: none;
 }
-header .top .inner .user_set .part_web_textbox .part_web_list {
+.user_set .part_web_textbox .part_web_list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-header .top .inner .user_set .part_web_textbox .part_web_list li {
+.user_set .part_web_textbox .part_web_list li {
   width: calc(100% / 3);
   height: 120px;
 }
-header .top .inner .user_set .part_web_textbox .part_web_list li a {
+.user_set .part_web_textbox .part_web_list li a {
   display: block;
   padding: 10px 0 0;
   letter-spacing: -0.025em;
   line-height: 18px;
   color: var(--text_1);
 }
-header .top .inner .user_set .part_web_textbox .part_web_list li a::before {
+.user_set .part_web_textbox .part_web_list li a::before {
   content: "";
   display: block;
   width: 56px;
@@ -167,82 +168,53 @@ header .top .inner .user_set .part_web_textbox .part_web_list li a::before {
   margin: 0 auto 10px;
   border-radius: 20px;
 }
-header
-  .top
-  .inner
-  .user_set
-  .part_web_textbox
-  .part_web_list
-  li:nth-child(1)
-  a::before {
+
+.user_set .part_web_textbox .part_web_list li:nth-child(1) a::before {
   background: url(../img/icon/site-list-ico01.png) no-repeat 50% 50%;
   background-color: #f16669;
 }
-header
-  .top
-  .inner
-  .user_set
-  .part_web_textbox
-  .part_web_list
-  li:nth-child(2)
-  a::before {
+.user_set .part_web_textbox .part_web_list li:nth-child(2) a::before {
   background: url(../img/icon/site-list-ico02.png) no-repeat 50% 50%;
   background-color: #bf9d83;
 }
-header
-  .top
-  .inner
-  .user_set
-  .part_web_textbox
-  .part_web_list
-  li:nth-child(3)
-  a::before {
+
+.user_set .part_web_textbox .part_web_list li:nth-child(3) a::before {
   background: url(../img/icon/site-list-ico03.png) no-repeat 50% 50%;
   background-color: #4cc771;
 }
-header
-  .top
-  .inner
-  .user_set
-  .part_web_textbox
-  .part_web_list
-  li:nth-child(4)
-  a::before {
+
+.user_set .part_web_textbox .part_web_list li:nth-child(4) a::before {
   background: url(../img/icon/site-list-ico04.png) no-repeat 50% 50%;
   background-color: #658dd0;
 }
-header
-  .top
-  .inner
-  .user_set
-  .part_web_textbox
-  .part_web_list
-  li:nth-child(5)
-  a::before {
+
+.user_set .part_web_textbox .part_web_list li:nth-child(5) a::before {
   background: url(../img/icon/site-list-ico05.png) no-repeat 50% 50%;
   background-color: #58606b;
 }
-header
-  .top
-  .inner
-  .user_set
-  .part_web_textbox
-  .part_web_list
-  li:nth-child(6)
-  a::before {
+
+.user_set .part_web_textbox .part_web_list li:nth-child(6) a::before {
   background: url(../img/icon/site-list-ico06.png) no-repeat 50% 50%;
   background-color: #9385dd;
 }
 
+/* logo */
 header .bottom {
   width: 100%;
   height: 72px;
-  background-color: #c5e1ff;
 }
 
 header .bottom .inner {
   height: 100%;
-  background-color: #65b0ff;
+}
+header .bottom .inner .logo a {
+  background: url(../img/logo/logo.png) no-repeat left;
+  height: 72px;
+  display: block;
+  text-indent: -99999999px;
+}
+header .bottom .inner .gnb_dep1 > ul {
+  display: flex;
 }
 
 main {

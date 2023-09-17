@@ -209,7 +209,7 @@ header .bottom {
 
 header .bottom .inner {
   height: 100%;
-  /* padding: 0 117px 0 145px; */
+  padding: 0 117px 0 145px;
 }
 
 header .bottom .inner .logo {
@@ -232,17 +232,19 @@ nav {
   height: 100%;
   position: relative;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 24px;
   z-index: 2;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .gnb_inner {
   display: flex;
   justify-content: center;
-  padding: 0 117px 0 145px;
 }
 .gnb_inner > li {
   width: 160px;
+  height: 52px;
 }
 .gnb_inner > li > a {
   margin-left: 16px;
@@ -255,30 +257,31 @@ nav {
 .w100 {
   overflow: hidden;
   background: #fff;
-  width: 100vw;
   height: 0;
   transition: all 0.3s;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 72px;
+  position: fixed;
+  top: 118px;
+  left: 41%;
+  width: 100%;
+  transform: translateX(-41%);
+}
+.w100 > .inner {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .depth2_inner {
-  margin-top: 23px;
-  padding: 0 14px 0 28px;
+  padding: 13px 17px 23px 17px;
   width: 160px;
-  /* height: 0;
-  overflow: hidden; */
+  position: relative;
+  left: 0;
 }
 
 .gnb_inner > li > .w100 a {
   display: block;
   opacity: 0;
   transition: all 0.5s;
-  font-size: 1.5rme;
+  font-size: 1.5rem;
   font-weight: 400;
   margin-top: 10px;
   letter-spacing: -0.5px;
@@ -288,87 +291,53 @@ nav {
   height: auto;
   overflow: visible;
 }
+
+.gnb_inner > li:nth-child(1):hover .w100 ul:nth-child(1) {
+  background-color: #e5e5e5;
+}
+.gnb_inner > li:nth-child(2):hover .w100 ul:nth-child(2) {
+  background-color: #e5e5e5;
+}
+.gnb_inner > li:nth-child(3):hover .w100 ul:nth-child(3) {
+  background-color: #e5e5e5;
+}
+.gnb_inner > li:nth-child(4):hover .w100 ul:nth-child(4) {
+  background-color: #e5e5e5;
+}
+.gnb_inner > li:nth-child(5):hover .w100 ul:nth-child(5) {
+  background-color: #e5e5e5;
+}
 .gnb_inner > li:hover .w100 a {
   opacity: 1;
 }
-
-/* header .bottom .inner .gnb_dep1 {
-  width: 100%;
-  height: 74px;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-header .bottom .inner .gnb_dep1 > ul {
+.user_support {
   display: flex;
   position: absolute;
-  top: 0;
-  right: 0;
-  padding-right: 145px;
-  padding-top: 20px;
-  height: 100%;
+  right: -117px;
+  top: 18px;
 }
-header .bottom .inner .gnb_dep1 > ul > li {
-  width: 160px;
+.toggle_search {
+  text-indent: -9999999px;
+  background: url(../img/icon/ico-search-navy.png) no-repeat center;
+  width: 40px;
+  height: 40px;
 }
-
-header .bottom .inner .gnb_dep1 > ul > li > a {
-  font-size: 20px;
-  color: var(--text_1);
+.toggle_menu {
+  text-indent: -9999999px;
+  background: url(../img/icon/ico-menu-navy.png) no-repeat center;
+  width: 40px;
+  height: 40px;
+  margin-left: 11px;
 }
-header .bottom .inner .gnb_dep1 > ul > li > a:hover {
-  font-size: 20px;
-  color: var(--primary);
+.toggle_menu.mobile {
+  display: none;
 }
-
-header .bottom .inner .gnb_dep1 .dep2 {
-  width: 160px;
-  position: absolute;
-  margin-top: 23px;
-  height: 0;
-  overflow: hidden;
+.toggle_menu {
+  text-indent: -9999999px;
+  background: url(../img/icon/ico-menu-navy.png) no-repeat center;
+  width: 40px;
+  height: 40px;
 }
-
-header .bottom .inner .gnb_dep1 ul:hover .dep2 {
-  padding: 26px 32px 26px 0;
-  height: 321px;
-  background-color: #fff;
-}
-
-header .bottom .inner .gnb_dep1 > ul > li > ul > li {
-  margin-top: 10px;
-}
-
-header .bottom .inner .gnb_dep1 > ul > li > ul > li > a {
-  font-size: 15px;
-  display: block;
-  letter-spacing: -0.5px;
-  color: var(--text_1);
-}
-
-header .bottom .inner .gnb_dep1 .dep2_bottom {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 393px;
-  transform: translateX(-50%);
-  height: 59px;
-  background: #fff;
-}
-
-header .bottom .inner .gnb_dep1 .dep2_bottom::after {
-  clear: both;
-  display: block;
-  content: "";
-}
-header .bottom .inner .gnb_dep1 .dep2_bottom a {
-  padding-left: 32px;
-  font-size: 15px;
-  color: var(--text_1);
-  display: block;
-  float: left;
-} */
 
 main {
   width: 100%;
@@ -438,4 +407,13 @@ footer {
 footer .inner {
   background-color: #ebebeb;
   height: 270px;
+}
+
+@media screen and (max-width: 1180px) {
+  header .top {
+    padding: 12px 20px 0;
+  }
+  header .bottom {
+    padding: 0 12px;
+  }
 }

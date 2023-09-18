@@ -206,15 +206,6 @@ header .bottom {
   border-bottom: 1px solid #e1e3e6;
   background: #fff;
 }
-header > .bottom::before {
-  width: 100%;
-  border-bottom: 1px solid #e1e3e6;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
 
 header .bottom .inner {
   height: 100%;
@@ -294,9 +285,20 @@ nav .favorite_wrap {
   line-height: 58px;
   padding-left: 9px;
 }
-nav .favorite_wrap ul {
-  display: flex;
+nav .favorite_wrap .depth2_inner {
+  display: none;
+  justify-content: flex-start;
+  gap: 32px;
 }
+nav .favorite_wrap .depth2_inner .fw_b {
+  font-size: 15px;
+  color: #44465c;
+  font-weight: 700;
+}
+nav .favorite_wrap .depth2_inner > li > a {
+  color: #3a3a4a;
+}
+
 .user_support {
   display: flex;
   position: absolute;

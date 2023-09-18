@@ -9,3 +9,13 @@ depth1.hover(
     $("nav").removeClass("on");
   }
 );
+depth1.hover(
+  function () {
+    $(".favorite_wrap>.depth2_inner").css("display", "flex");
+    $("nav").addClass("on");
+  },
+  function () {
+    $(".favorite_wrap>.depth2_inner").css("display", "none");
+    $("nav").removeClass("on");
+  }
+);

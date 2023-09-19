@@ -68,7 +68,7 @@ header .top .inner .control .default_sound {
   background: url(../img/btn/btn-sound.png);
 }
 header .top .inner .control .default_mute {
-  display: none;
+  /* display: none; */
   background: url(../img/btn/btn-mute.png);
 }
 /* user_set */
@@ -120,7 +120,7 @@ header .top .inner .control .default_mute {
   position: absolute;
   top: 35px;
   border-radius: 10px;
-  display: none;
+  /* display: none; */
 }
 .user_set .lag_textbox ul {
   padding: 8px 0;
@@ -141,7 +141,7 @@ header .top .inner .control .default_mute {
   top: 35px;
   right: 0;
   border-radius: 10px;
-  display: none;
+  /* display: none; */
 }
 .user_set .part_web_textbox .part_web_list {
   display: flex;
@@ -206,6 +206,18 @@ header .bottom {
   border-bottom: 1px solid #e1e3e6;
   background: #fff;
 }
+header .bottom::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 118px;
+  left: 0;
+  right: 0;
+  height: 325px;
+  border-bottom: 1px solid #e1e3e6;
+  background: #fff;
+  z-index: -2;
+}
 
 header .bottom .inner {
   height: 100%;
@@ -237,6 +249,16 @@ nav .gnb_inner {
   display: flex;
   justify-content: flex-end;
 }
+nav .gnb_inner::before {
+  content: "";
+  display: block;
+  background: url(../img/main/gnb-visual.png) no-repeat left center;
+  width: 130px;
+  height: 100%;
+  position: absolute;
+  left: -207px;
+  z-index: -1;
+}
 nav .gnb_inner > li {
   width: 160px;
   display: flex;
@@ -264,9 +286,6 @@ nav .gnb_inner > li > .depth2_inner {
   display: block;
   padding: 13px 17px;
   margin-left: 0px;
-  overflow: hidden;
-  transition: 0.3s all ease;
-  display: none;
 }
 
 nav .gnb_inner > li > .depth2_inner > li {
@@ -285,10 +304,19 @@ nav .favorite_wrap {
   line-height: 58px;
   padding-left: 9px;
 }
+
+nav .favorite_wrap.inner {
+  padding: 0 14%;
+}
 nav .favorite_wrap .depth2_inner {
   display: none;
   justify-content: flex-start;
   gap: 32px;
+}
+nav .favorite_wrap ul.depth2_inner:hover {
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
 }
 nav .favorite_wrap .depth2_inner .fw_b {
   font-size: 15px;
@@ -319,7 +347,7 @@ nav .favorite_wrap .depth2_inner > li > a {
   margin-left: 11px;
 }
 .toggle_menu.mobile {
-  display: none;
+  /* display: none; */
 }
 .toggle_menu {
   text-indent: -9999999px;
@@ -398,10 +426,19 @@ footer .inner {
 }
 
 @media screen and (max-width: 1180px) {
+  .inner {
+    width: 100%;
+  }
   header .top {
     padding: 12px 20px 0;
   }
   header .bottom {
-    padding: 0 12px;
+    padding: 0 20px;
+  }
+  nav .gnb_inner::before {
+    left: -156px;
+  }
+  nav .favorite_wrap.inner {
+    padding: 0 3%;
   }
 }

@@ -422,6 +422,8 @@ main {
   filter: drop-shadow(-5px 5px 10px #ee08005f);
 }
 .search_wrap .form-area .button_search i.bi {
+  position: relative;
+  top: 2px;
   font-size: 3rem;
   color: #fff;
 }
@@ -445,12 +447,12 @@ main {
 /* bxslider */
 .bx-wrapper .bx-controls-auto {
   position: absolute;
-  left: 98px;
+  left: 9.8rem;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager {
   position: absolute;
-  top: 113px;
+  top: 11.3rem;
   left: 0;
 }
 /* bxslider */
@@ -462,18 +464,191 @@ main {
 .visitor_menu .inner {
   height: 100%;
 }
-
-/* .banner_wrap {
-  background-color: #c0ffcd;
-  height: 210px;
+.visitor_menu .inner .title_wrap {
+  display: flex;
+  margin-bottom: 35px;
+}
+.visitor_menu .inner .title_wrap strong {
+  margin-right: 1.8rem;
+  color: var(--text_3);
+}
+.visitor_menu .inner .title_wrap .title_M {
+  display: none;
+}
+.visitor_menu .inner .toggle_wrap {
+  display: flex;
+  width: 19.2rem;
+  border: 1px solid #e1e3e6;
+  background-color: #f6f6f6;
+  border-radius: 2rem;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
 }
 
-.banner_wrap .inner {
+.toggle_wrap button {
+  width: 50%;
+  height: 3.2rem;
+  line-height: 3rem;
+  background: 0;
+  position: relative;
+  z-index: 1;
+  color: var(--text_3);
+}
+.toggle_wrap button.on {
+  content: "";
+  width: 50%;
+  height: 3.2rem;
+  background-color: #ee0700;
+  z-index: 1;
+  border-radius: 2rem;
+  color: #fff;
+}
+.title_wrap .add {
+  position: absolute;
+  right: 0;
+}
+.title_wrap .add .addPlus {
+  display: block;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  padding: 0 12px;
+  border: 1px solid #69727e;
+  color: var(--text_1);
+  background-color: #fff;
+  border-radius: 4px;
+}
+.menu_list {
   height: 100%;
-  background-color: #90ffa6;
+  overflow: hidden;
+  /* display: none; */
+}
+.menu-list.on {
+  display: block;
+}
+.menu_list:last-child {
+  display: none;
+}
+.menu_list ul {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+.menu_list ul li {
+  width: 9.1%;
+  float: left;
+  margin-left: 2.2%;
+}
+.menu_list ul li:first-child {
+  margin-left: 0;
+}
+.menu_list ul li a {
+  line-height: 24px;
+  color: #3a3a4a;
+  font-weight: 700;
+  font-size: 16px;
+  font-weight: 400;
+}
+.menu_list ul li a:hover {
+  text-decoration: none;
+}
+.menu_list ul li a:hover span {
+  background-color: var(--text_1);
+}
+.menu_list ul li a:hover span img {
+  filter: brightness(0) invert(100%);
+}
+.menu_list ul li a:hover span em {
+  background: #fff url(../img/icon/ico-go-to-site-on.png) no-repeat center
+    center;
+}
+.menu_list ul li a span {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  display: inline-block;
+  background-color: var(--background);
+  border-radius: 32px;
+  margin-bottom: 23px;
+  position: relative;
+}
+.menu_list ul li a span img {
+  vertical-align: middle;
+}
+.menu_list ul li a span em {
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  text-indent: -9999999px;
+  border-radius: 50%;
+  bottom: 0;
+  background: #44465c url(../img/icon/ico-go-to-site.png) no-repeat center
+    center;
 }
 
-.background {
+.banner_wrap {
+  margin-top: 5em;
+  padding-bottom: 8rem;
+}
+.banner_wrap .inner .banner_top {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.banner_wrap .inner .banner_img ul li a::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background: url(../img/arrow/arrow-slide-l.png) no-repeat center center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(calc(-50% - 5px));
+  left: 30px;
+}
+.banner_wrap .inner .banner_img ul li a::before {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background: url(../img/arrow/arrow-slide-r.png) no-repeat center center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(calc(-50% - 5px));
+  right: 30px;
+}
+.banner_wrap .inner .banner_img ul li a img {
+  border-radius: 10px 55px 10px 10px;
+}
+
+.banner_wrap .inner .banner_img ul li a p {
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  margin-top: 38px;
+  text-align: center;
+  color: #111;
+  letter-spacing: -1.5px;
+}
+.banner_wrap .inner .banner_img ul li a p:nth-child(2) {
+  margin-top: 0;
+}
+
+.banner_wrap .bx-wrapper .bx-pager.bx-default-pager {
+  position: absolute;
+  margin-top: 18px;
+  top: -18px;
+  left: 0;
+}
+
+.banner_wrap .bx-wrapper .bx-controls-auto {
+  position: absolute;
+  top: 7px;
+  left: 45px;
+}
+
+/* .background {
   background-color: #e2e2e2;
   height: 1508px;
 }

@@ -190,3 +190,14 @@ button {
   font-family: "NBG", "나눔바른고딕", "Malgun Gothic", "맑은 고딕", Dotum,
     "돋움", sans-serif;
 }
+
+a,
+button {
+  outline-color: blue;
+  outline-offset: -0.5px;
+}
+button {
+  cursor: pointer;
+  border: 0;
+  text-transform: none;
+}

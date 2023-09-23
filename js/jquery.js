@@ -15,6 +15,7 @@ depth1.hover(
   }
 );
 
+//top banner
 $(".top_banner ul").bxSlider({
   mode: "horizontal",
   auto: true,
@@ -25,4 +26,28 @@ $(".top_banner ul").bxSlider({
   pagerType: "short",
   speed: 1000,
   pause: 5000,
+});
+
+//main banner
+$(".banner_img ul").bxSlider({
+  mode: "horizontal",
+  auto: true,
+  autoControls: true,
+  stopAutoOnClick: true,
+  pager: true,
+  pagerType: "short",
+  speed: 1000,
+  pause: 5000,
+});
+
+//tab
+const tabBtn = $(".toggle_wrap button");
+const panels = $(".menu_list");
+tabBtn.on("click", function (e) {
+  e.preventDefault();
+  let tg = $(this).index();
+  panels.hide();
+  tabBtn.removeClass("on");
+  panels.eq(tg).show();
+  tabBtn.eq(tg).addClass("on");
 });

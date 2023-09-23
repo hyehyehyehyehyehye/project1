@@ -61,3 +61,47 @@
     url(https://idcwww.nhis.or.kr/fonts/NotoSans-Bold.woff2) format("woff2"),
     url(https://idcwww.nhis.or.kr/fonts/NotoSans-Bold.woff) format("woff");
 }
+
+.fs-12 {
+  font-size: 1.2rem;
+}
+
+.fs-13 {
+  font-size: 1.3rem;
+}
+
+.fs-14 {
+  font-size: 1.4rem;
+}
+
+.fs-15 {
+  font-size: 1.5rem;
+}
+
+.fs-16 {
+  font-size: 1.6rem;
+}
+
+.fs-17 {
+  font-size: 1.7rem;
+}
+
+.fs-18 {
+  font-size: 1.8rem;
+}
+
+.fs-19 {
+  font-size: 1.9rem;
+}
+
+.fs-20 {
+  font-size: 2rem;
+}
+
+.fs-21 {
+  font-size: 2.1rem;
+}
+
+.fs-28 {
+  font-size: 2.8rem;
+}

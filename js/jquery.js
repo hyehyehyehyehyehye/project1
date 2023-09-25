@@ -1,17 +1,16 @@
 //언어
 
 //nav
-const depth1 = $(".gnb_inner");
-depth1.hover(
+$(".gnb_inner,.favorite,.bottom inner").hover(
   function () {
     $(".depth2_inner").css("display", "block");
-    $(".favorite_wrap>.depth2_inner").css("display", "flex");
-    $("header .bottom").addClass("on");
+    $(".favorite").css("display", "flex");
+    $("header").addClass("on");
   },
   function () {
     $(".depth2_inner").css("display", "none");
-    $(".favorite_wrap>.depth2_inner").css("display", "none");
-    $("header .bottom").removeClass("on");
+    $(".favorite").css("display", "none");
+    $("header").removeClass("on");
   }
 );
 

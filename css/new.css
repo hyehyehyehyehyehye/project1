@@ -1,0 +1,32 @@
+#logo {
+  height: auto !important;
+}
+
+header.on .bottom {
+  position: absolute;
+  background-color: #fff;
+  height: 45rem;
+  z-index: 9999;
+}
+header.on .bottom:before {
+  content: "";
+  position: absolute;
+  background-color: rgb(136, 136, 136);
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 5rem;
+}
+header.on .bottom .inner {
+  height: auto;
+}
+header .bottom .favorite {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  align-items: center;
+  display: none;
+}
+header.on .bottom .favorite {
+  display: block;
+}

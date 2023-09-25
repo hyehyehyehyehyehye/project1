@@ -37,6 +37,9 @@ header {
   position: relative;
   z-index: 3;
 }
+header.on {
+  padding-bottom: 7.2rem;
+}
 
 header .top {
   width: 100%;
@@ -229,23 +232,35 @@ header .bottom {
   height: 7.2rem;
   border-bottom: 1px solid #e1e3e6;
   background: #fff;
+  position: relative;
 }
-header .bottom::after {
-  content: "";
-  display: none;
+header.on .bottom {
   position: absolute;
-  top: 118px;
-  left: 0;
-  right: 0;
-  height: 32.5rem;
+  background-color: #fff;
+  height: 46rem;
+  z-index: 9999;
   border-bottom: 1px solid #e1e3e6;
-  background: #fff;
-  z-index: -2;
-}
-header .bottom.on::after {
-  display: block;
 }
 
+header.on .bottom:before {
+  content: "";
+  position: absolute;
+  background-color: #e1e3e6;
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  bottom: 5.9rem;
+}
+header.on .bottom::after {
+  content: "";
+  position: absolute;
+  background-color: #e1e3e6;
+  height: 1px;
+  width: 100%;
+  top: 7.1rem;
+  left: 0;
+}
 header .bottom .inner {
   height: 100%;
   padding: 0 117px 0 145px;
@@ -277,19 +292,34 @@ nav .gnb_inner {
 }
 nav .gnb_inner::before {
   content: "";
-  display: block;
   background: url(../img/main/gnb-visual.png) no-repeat left center;
   width: 130px;
   height: 100%;
   position: absolute;
-  left: -207px;
+  left: -90px;
   z-index: -1;
+  padding-top: 51px;
+  display: none;
+}
+header.on nav .gnb_inner::before {
+  content: "";
+  background: url(../img/main/gnb-visual.png) no-repeat left center;
+  width: 130px;
+  height: 100%;
+  position: absolute;
+  left: -90px;
+  z-index: -1;
+  padding-top: 51px;
+  display: block;
 }
 nav .gnb_inner > li {
   width: 16rem;
   display: flex;
   position: relative;
   flex-direction: column;
+}
+nav .gnb_inner > li:hover .depth2_inner {
+  background-color: #f6f6f6;
 }
 nav .gnb_inner > li.on > a {
   font-size: 2rem;
@@ -299,7 +329,7 @@ nav .gnb_inner > li.on > a {
   margin-left: 16px;
   font-family: "NotoKr";
   position: relative;
-  height: 52px;
+  height: 5.2rem;
 }
 nav .gnb_inner > li.on:hover > a {
   color: #ee0700;
@@ -307,9 +337,9 @@ nav .gnb_inner > li.on:hover > a {
 
 nav .gnb_inner > li > .depth2_inner {
   position: relative;
-  height: 325px;
+  height: 327px;
   display: none;
-  padding: 13px 17px;
+  padding: 17px 17px;
   margin-left: 0px;
 }
 
@@ -324,11 +354,28 @@ nav .gnb_inner > li > .depth2_inner > li > a {
   font-weight: 400;
 }
 
-nav .favorite_wrap {
-  height: 59px;
-  line-height: 58px;
-  padding-left: 9px;
+/* nav favorite */
+header .bottom .favorite {
+  display: flex;
+  gap: 3rem;
+  height: 5.9rem;
+  align-items: center;
+  display: none;
   background-color: #fff;
+  position: relative;
+  top: -5.9rem;
+  left: 13rem;
+}
+header .bottom .favorite > a {
+  color: var(--text_3);
+}
+header .bottom .favorite > a:nth-child(1) {
+  font-weight: 600;
+  color: var(--text_3);
+}
+
+header.on .bottom .favorite {
+  display: block;
 }
 
 nav .favorite_wrap.inner {

@@ -1,4 +1,4 @@
-//언어
+//언어 toggle
 
 //nav
 $(".gnb_inner,.favorite,.bottom inner").hover(

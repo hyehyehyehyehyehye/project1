@@ -695,34 +695,117 @@ main {
   left: 45px;
 }
 
-/* .background {
-  background-color: #e2e2e2;
-  height: 1508px;
+/* ////banner_wrap end */
+
+/* ////background start */
+
+.background {
+  padding: 8rem 0 85rem 0;
+  background-color: var(--background);
 }
+
 .background .inner .hiwell_news_wrap {
-  width: 100%;
-  height: 400px;
-  background-color: #b6b6b6;
+  display: flex;
+}
+
+.news,
+.info,
+.quick_link {
+  width: 29.8%;
+  height: 320px;
+  margin-left: 5.3%;
+}
+.background .inner .hiwell_news_wrap .news {
+  border-radius: 50px 20px 20px 20px;
+  background-color: #ef6266;
+  padding-top: 25px;
+  margin-left: 0%;
+}
+
+.background .inner .hiwell_news_wrap .news ul > li {
+  border-bottom: 1px solid #f18f91;
+}
+.background .inner .hiwell_news_wrap .news ul > li:nth-child(5) {
+  border-bottom: none;
+}
+.background .inner .hiwell_news_wrap .news ul li a {
+  height: 52px;
+  line-height: 52px;
+  color: #fff;
+  display: block;
+  padding: 0 0 0 40px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-right: 4rem;
+  text-decoration: none;
+}
+.background .inner .hiwell_news_wrap .news ul > li:nth-child(1) a {
+  background: url(../img/icon/icon_news_area_01.png) no-repeat right;
+}
+.background .inner .hiwell_news_wrap .news ul > li:nth-child(2) a {
+  background: url(../img/icon/icon_news_area_02.png) no-repeat right;
+}
+.background .inner .hiwell_news_wrap .news ul > li:nth-child(3) a {
+  background: url(../img/icon/icon_news_area_03.png) no-repeat right;
+}
+.background .inner .hiwell_news_wrap .news ul > li:nth-child(4) a {
+  background: url(../img/icon/icon_news_area_04.png) no-repeat right;
+}
+.background .inner .hiwell_news_wrap .news ul > li:nth-child(5) a {
+  background: url(../img/icon/icon_news_area_05.png) no-repeat right;
+}
+.background .inner .hiwell_news_wrap .info {
+  border-radius: 20px 50px 20px 20px;
+  border: 1px solid #e1e3e6;
+  background-color: #fff;
+  padding: 35px 39px 0;
+}
+.background .inner .hiwell_news_wrap .info .p_title {
+  font-weight: 700;
+  color: var(--text_3);
+  margin-bottom: 2.3rem;
+}
+.background .inner .hiwell_news_wrap .info ul li {
+  border-bottom: 1px solid #f0edec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.background .inner .hiwell_news_wrap .info ul li:nth-child(1) {
+  border-top: 1px solid #f0edec;
+}
+.background .inner .hiwell_news_wrap .info ul li a {
+  height: 4.5rem;
+  line-height: 4.5rem;
+  padding-right: 1.7rem;
+  background: url(../img/arrow/arrow-link.png) no-repeat right;
+}
+.background .inner .hiwell_news_wrap .info ul li img {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+.background .inner .hiwell_news_wrap .info ul li a {
+  height: 4.5rem;
+  line-height: 4.5rem;
+  padding-right: 1.7rem;
+  background: url(../img/arrow/arrow-link.png) no-repeat right;
+}
+.background .inner .hiwell_news_wrap .quick_link {
+  border-radius: 20px 50px 20px 20px;
+  border: 1px solid #e1e3e6;
+  background: #2fa298 url(../img/bg/bg-guarantee.png) no-repeat right bottom;
+  padding: 35px 39px 0;
 }
 
 .background .inner .hiwell_service {
-  width: 100%;
-  height: 380px;
-  background-color: #c0c0c0;
 }
 
 .background .inner .about_hiwell {
-  width: 100%;
-  height: 382px;
-  background-color: #b9b9b9;
 }
 .background .inner .center {
-  width: 100%;
-  height: 346px;
-  background-color: #dadada;
 }
 
-footer {
+/* footer {
   background-color: #e2e2e2;
   height: 270px;
 }

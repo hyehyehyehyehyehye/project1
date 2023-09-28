@@ -794,10 +794,136 @@ main {
   border-radius: 20px 50px 20px 20px;
   border: 1px solid #e1e3e6;
   background: #2fa298 url(../img/bg/bg-guarantee.png) no-repeat right bottom;
-  padding: 35px 39px 0;
+  padding-top: 25px;
+}
+.background .inner .hiwell_news_wrap .quick_link ul li {
+  border-bottom: 1px solid #82c7c1;
+  position: relative;
+}
+.background .inner .hiwell_news_wrap .quick_link ul li:nth-child(3) {
+  border-bottom: none;
+}
+.background .inner .hiwell_news_wrap .quick_link ul li a {
+  height: 5.2rem;
+  line-height: 5.2rem;
+  color: #fff;
+  display: block;
+  padding: 0 0 0 40px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-right: 4rem;
+}
+.background .inner .hiwell_news_wrap .quick_link ul li span {
+  color: #fff;
+  display: block;
+  padding: 0 0 0 40px;
+  margin-right: 4rem;
 }
 
 .background .inner .hiwell_service {
+  margin: 62px auto 0;
+  overflow: hidden;
+  display: flex;
+}
+
+.background .inner .hiwell_service .policy {
+  width: 64.9%;
+  height: 32rem;
+  margin-right: 5.3%;
+  background: url(../img/bg/bg-notice.png) no-repeat;
+  background-size: 100% 100%;
+  padding: 3rem 5rem 0;
+}
+.background .inner .hiwell_service .policy dl {
+  width: 100%;
+  text-align: center;
+}
+.background .inner .hiwell_service .policy dl dt {
+  display: inline-block;
+  color: var(--text_3);
+  font-weight: 700;
+  line-height: 3.5rem;
+  padding-left: 5.9rem;
+  background: url(../img/icon/ico-notice.png) no-repeat left center;
+  text-align: left;
+}
+.background .inner .hiwell_service .policy dl dt strong {
+  display: block;
+}
+.background .inner .hiwell_service .policy dl dd {
+  display: block;
+  border-top: 1px solid #f7cc01;
+  padding-top: 2.5rem;
+  margin-top: 2rem;
+}
+.background .inner .hiwell_service .policy dl dd a {
+  display: block;
+  margin-top: 0.7rem;
+  text-decoration: none;
+  color: var(--text_3);
+}
+.background .inner .hiwell_service .policy dl dd a p {
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+.background .inner .hiwell_service .event_banner {
+  width: 29.8%;
+  height: 32rem;
+  background-color: #fff;
+  border: 1px solid #e1e3e6;
+  padding: 33px 39px 0;
+  border-radius: 20px 20px 55px 20px;
+  position: relative;
+}
+.background .inner .hiwell_service .event_banner .p_title {
+  font-weight: 700;
+  margin-bottom: 1.9rem;
+  color: var(--text_3);
+}
+.background .inner .hiwell_service .event_banner ul {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.background .inner .hiwell_service .event_banner ul img {
+  width: 100%;
+  height: 19rem;
+}
+
+.hiwell_service .event_banner .bx-wrapper {
+  position: relative;
+}
+.hiwell_service .event_banner .bx-wrapper .bx-pager.bx-default-pager {
+  position: absolute;
+  top: 3.4rem;
+  left: 20rem;
+}
+.hiwell_service .event_banner .bx-wrapper .bx-controls-direction {
+  width: 100%;
+}
+.hiwell_service .event_banner .bx-wrapper .bx-controls-direction a {
+  position: relative;
+  /* bottom: 22.5rem;
+  left: 21.7rem; */
+  z-index: 5;
+  display: block;
+  text-indent: -999999px;
+}
+.hiwell_service .event_banner .bx-wrapper .bx-controls-direction .bx-prev {
+  position: absolute;
+  left: 25.2rem;
+  bottom: 26.2rem;
+}
+.hiwell_service .event_banner .bx-wrapper .bx-controls-direction .bx-next {
+  position: absolute;
+  left: 30rem;
+  bottom: 26.2rem;
+}
+.hiwell_service .event_banner .bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: 26.3rem;
+  left: 27rem;
 }
 
 .background .inner .about_hiwell {

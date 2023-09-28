@@ -50,3 +50,15 @@ tabBtn.on("click", function (e) {
   panels.eq(tg).show();
   tabBtn.eq(tg).addClass("on");
 });
+
+//event banner
+$(".hiwell_service ul").bxSlider({
+  mode: "horizontal",
+  auto: true,
+  autoControls: true,
+  stopAutoOnClick: true,
+  pager: true,
+  pagerType: "short",
+  speed: 1000,
+  pause: 5000,
+});

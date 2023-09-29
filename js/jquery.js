@@ -61,4 +61,17 @@ $(".hiwell_service ul").bxSlider({
   pagerType: "short",
   speed: 1000,
   pause: 5000,
+  slideWidth: "272px",
+});
+
+$(".pr_banner2 ul").bxSlider({
+  mode: "horizontal",
+  auto: true,
+  autoControls: true,
+  stopAutoOnClick: true,
+  pager: true,
+  pagerType: "short",
+  speed: 1000,
+  pause: 5000,
+  slideWidth: "272px",
 });

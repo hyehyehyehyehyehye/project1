@@ -1,4 +1,20 @@
 //언어 toggle
+$(".language").click(function () {
+  if ($(".lag_textbox").is(":visible")) {
+    $(".lag_textbox").hide();
+  } else {
+    $(".lag_textbox").show();
+    $(".part_web_textbox").hide();
+  }
+});
+$(".site_visit").click(function () {
+  if ($(".part_web_textbox").is(":visible")) {
+    $(".part_web_textbox").hide();
+  } else {
+    $(".part_web_textbox").show();
+    $(".lag_textbox").hide();
+  }
+});
 
 //nav
 $(".gnb_inner,.favorite,.bottom inner").hover(
@@ -74,4 +90,13 @@ $(".pr_banner2 ul").bxSlider({
   speed: 1000,
   pause: 5000,
   slideWidth: "272px",
+});
+
+//내부관련사이트
+let btn = $(".family_link");
+let list = $(".box_site");
+let navLinks = $("box_site ul li");
+btn.click(function () {
+  list.toggleClass("active");
+  btn.toggleClass("on");
 });

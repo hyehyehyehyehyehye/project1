@@ -115,7 +115,7 @@ header .top .inner .control .default_sound {
   background: url(../img/btn/btn-sound.png);
 }
 header .top .inner .control .default_mute {
-  /* display: none; */
+  display: none;
   background: url(../img/btn/btn-mute.png);
 }
 /* user_set */
@@ -154,6 +154,11 @@ header .top .inner .control .default_mute {
   padding-right: 15px;
   text-indent: -999999999px;
 }
+.user_set .dep1 > li.on button {
+  background: url(../img/arrow/arrow-navy-8x6-on.png) no-repeat right;
+  padding-right: 15px;
+  text-indent: -999999999px;
+}
 
 .user_set .lag_textbox {
   width: 13rem;
@@ -163,12 +168,10 @@ header .top .inner .control .default_mute {
   position: absolute;
   top: 35px;
   border-radius: 10px;
-  opacity: 0;
+  display: none;
   z-index: 3;
 }
-.user_set .lag_textbox.on {
-  opacity: 1;
-}
+
 .user_set .lag_textbox ul {
   padding: 8px 0;
 }
@@ -188,6 +191,7 @@ header .top .inner .control .default_mute {
   top: 35px;
   right: 0;
   border-radius: 10px;
+  z-index: 10;
   display: none;
 }
 .user_set .part_web_textbox .part_web_list {
@@ -1156,6 +1160,7 @@ footer .inner .footer_nav {
 }
 footer .inner .footer_nav .nav_link {
   display: flex;
+  align-items: center;
   gap: 2rem;
 }
 footer .inner .footer_nav .nav_link a {
@@ -1208,11 +1213,8 @@ footer .inner .footer_nav .family_wrap .family_link .box_site {
   bottom: 46px;
   left: 0;
 }
-footer .inner .footer_nav .family_wrap .family_link.on .box_site {
-  display: block;
-}
 
-.box_site {
+footer .inner .footer_nav .family_wrap .family_link .box_site.active {
   display: block;
   overflow: hidden;
   width: 243px;
@@ -1286,7 +1288,7 @@ footer .inner .sns_link li a.insta {
 }
 footer p a {
   position: fixed;
-  right: 30rem;
+  right: 1rem;
   bottom: 40px;
   z-index: 1;
   text-indent: -9999px;
@@ -1381,6 +1383,7 @@ footer p a {
   height: 1.6rem;
   background: url(../img/icon/ico-kakao-on.png);
 }
+
 @media screen and (max-width: 1550px) {
   .wrap::before,
   .wrap::after {
@@ -1407,8 +1410,138 @@ footer p a {
   .banner_wrap .bx-wrapper .bx-controls-auto .bx-stop {
     margin: 0 0 1px 25px;
   }
+  .visitor_menu {
+    margin-top: 6rem;
+  }
+  header .bottom .inner {
+    padding-left: 22rem;
+  }
+  .event_banner .bx-wrapper .bx-controls-auto {
+    left: 20.8rem;
+  }
+  .pr_banner2 .bx-wrapper .bx-controls-auto {
+    left: 20.8rem;
+  }
+  .background .inner .hiwell .customer_wrap ul li:nth-child(1) a {
+    padding: 13px 15px;
+  }
 }
 
+@media screen and (max-width: 990px) {
+  .top,
+  .user_set,
+  nav,
+  .favorite {
+    display: none;
+  }
+  header .bottom {
+    padding: 0;
+    height: 65px;
+    position: static;
+    border-bottom: 1px solid #e1e3e6;
+  }
+  header .bottom .inner {
+    padding: 0 87px 0 14px;
+  }
+  header .bottom .inner::after {
+    width: 180px;
+    height: 74px;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background: url(../img/bg/m-header-bg.png) no-repeat right;
+    background-size: 180px 74px;
+  }
+  header .bottom .inner .logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+  }
+  header .bottom .inner .logo a {
+    width: 100px;
+    height: 52px;
+    background: url(../img/logo/logo.png) no-repeat left;
+    background-size: 100px 39px;
+  }
+  .quick_menu {
+    display: none;
+  }
+  footer p a {
+    display: none;
+  }
+  .news,
+  .info,
+  .quick_link {
+    width: 31.8%;
+    margin-left: 2.3%;
+  }
+  .background .inner .hiwell_news_wrap .info {
+    padding: 38px 25px 0;
+  }
+  .background .inner .hiwell_service .policy {
+    width: 65.9%;
+    margin-right: 2.3%;
+    padding: 43px 30px 0;
+  }
+  .background .inner .hiwell_service .event_banner {
+    width: 31.8%;
+  }
+  .background .inner .about_hiwell {
+    margin-top: 45px;
+  }
+  .background .inner .about_hiwell .alarm {
+    width: 31.8%;
+  }
+  .background .inner .about_hiwell .about_link {
+    width: 31.8%;
+    margin-left: 2.3%;
+  }
+  .background .inner .about_hiwell .pr_banner2 {
+    width: 31.8%;
+    margin-left: 2.3%;
+  }
+  .background .inner .hiwell {
+    flex-wrap: wrap;
+    height: auto;
+    margin-top: 45px;
+    padding: 45px 20px;
+  }
+  .background .inner .hiwell .customer_wrap {
+    width: 63%;
+  }
+  .background .inner .hiwell .news_letter {
+    width: 33%;
+  }
+  .background .inner .hiwell .app_download {
+    width: 100%;
+    padding-top: 30px;
+    width: 100%;
+  }
+  .background .inner .hiwell .p_title {
+    margin-bottom: 2.3rem;
+  }
+  footer .inner .footer_nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  footer .inner .text_sns {
+    margin: 60px 0 0;
+  }
+  footer .inner .sns_link {
+    right: 50%;
+    transform: translateX(50%);
+    top: 13rem;
+  }
+  footer .inner .text_sns .footer_text {
+    text-align: center;
+  }
+}
 @media screen and (max-width: 640px) {
   .banner_mobile {
     display: block;

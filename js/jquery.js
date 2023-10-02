@@ -100,3 +100,9 @@ btn.click(function () {
   list.toggleClass("active");
   btn.toggleClass("on");
 });
+
+//포트폴리오 닫기
+$(".btn_close").on("click", function (e) {
+  e.preventDefault();
+  $(".popup").hide();
+});

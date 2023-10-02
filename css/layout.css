@@ -718,6 +718,34 @@ main {
   left: 45px;
 }
 
+.popup {
+  position: absolute;
+  left: 50%;
+  top: 150%;
+  transform: translate(-50%, -50%);
+}
+.popup .textbox {
+  width: 500px;
+  height: 100px;
+  background-color: #ffffff;
+  text-align: center;
+  line-height: 30px;
+  padding-top: 5px;
+  border-radius: 10px;
+  color: red;
+  font-weight: bold;
+  box-shadow: 0px 3px 10px #757575;
+}
+
+.popup .btn_close {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 24px;
+}
+
 /* ////banner_wrap end */
 
 /* ////background start */

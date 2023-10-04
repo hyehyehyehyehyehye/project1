@@ -97,8 +97,8 @@ let btn = $(".family_link");
 let list = $(".box_site");
 let navLinks = $("box_site ul li");
 btn.click(function () {
-  list.toggleClass("active");
-  btn.toggleClass("on");
+  $(this).find(".box_site").toggleClass("active");
+  $(this).find("button").toggleClass("on");
 });
 
 //포트폴리오 닫기

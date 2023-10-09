@@ -106,3 +106,25 @@ $(".btn_close").on("click", function (e) {
   e.preventDefault();
   $(".popup").hide();
 });
+
+// toggle_menu.mobile;
+$(".toggle_menu.mobile").click(function () {
+  $(".mobile_nav").css("display", "block");
+  $(".mobile_nav").css("transform", "translateX(0)");
+  $(".mobile_nav").css("transition", "transform 0.5s");
+  $(".user_support").css("z-index", "-99");
+});
+$(".icon_btn").click(function () {
+  $(".mobile_nav").css("display", "none");
+  $(".mobile_nav").css("transform", "translateX(100%)");
+  $(".mobile_nav").css("transition", "transform 0.5s");
+  $(".user_support").css("z-index", "10");
+});
+
+$(".toggle_menu.mobile").on("click", function () {
+  $(".overlay").addClass("open");
+});
+
+$(".icon_btn").on("click", function () {
+  $(".overlay").removeClass("open");
+});

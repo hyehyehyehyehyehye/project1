@@ -466,11 +466,14 @@ main {
 .main_search .inner {
   height: 11.8rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 .search_wrap {
   padding-top: 20px;
   width: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
 }
 .search_wrap .form-area {
   padding-right: 8rem;
@@ -506,31 +509,80 @@ main {
 
 .top_banner {
   position: relative;
-  margin-left: 185px;
-}
-
-.top_banner ul {
+  right: 0;
+  overflow: hidden;
   width: 41rem;
   height: 11.8rem;
-  overflow: hidden;
   display: flex;
+}
+.top_banner ul li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.top_banner ul li a {
+  display: block;
+}
+.top_banner ul li:nth-child(1) {
+  left: 0;
+}
+.top_banner ul li:nth-child(2) {
+  left: 41rem;
+}
+.top_banner ul li:nth-child(3) {
+  left: calc(41rem * 2);
+}
+.top_banner ul li:nth-child(4) {
+  left: calc(41rem * 3);
+}
+.top_banner ul li:nth-child(5) {
+  left: calc(41rem * 4);
+}
+.top_banner ul li:nth-child(6) {
+  left: calc(41rem * 5);
+}
+.top_banner ul li:nth-child(7) {
+  left: calc(41rem * 6);
+}
+.top_banner ul li:nth-child(8) {
+  left: calc(41rem * 7);
+}
+.top_banner ul li:nth-child(9) {
+  left: calc(41rem * 8);
+}
+.top_banner ul li:nth-child(10) {
+  left: calc(41rem * 9);
+}
+.top_banner ul li:nth-child(11) {
+  left: calc(41rem * 10);
+}
+
+.btnImg {
+  position: relative;
+  top: 12rem;
+}
+
+.btnImg .left {
+  position: absolute;
+  left: -350px;
+}
+.btnImg .right {
+  position: absolute;
+  left: -330px;
+}
+.counter {
+  position: absolute;
+  bottom: -28px;
+  right: 38rem;
+  font-size: 1.6rem;
+  color: var(--text_3);
+  font-weight: 700;
 }
 
 .banner_mobile {
   display: none;
 }
-/* bxslider */
-.bx-wrapper .bx-controls-auto {
-  position: absolute;
-  left: 9.8rem;
-}
-
-.bx-wrapper .bx-pager.bx-default-pager {
-  position: absolute;
-  top: 11.3rem;
-  left: 0;
-}
-/* bxslider */
 
 /* visitor_menu */
 .visitor_menu {
@@ -666,6 +718,9 @@ main {
 .banner_wrap {
   margin-top: 5em;
   padding-bottom: 8rem;
+}
+.banner_wrap .inner {
+  padding: 0;
 }
 .banner_wrap .inner .banner_top {
   color: #fff;
@@ -980,7 +1035,8 @@ main {
   bottom: 225px;
 }
 .event_banner .bx-wrapper .bx-pager.bx-default-pager {
-  top: -246px;
+  position: relative;
+  top: -224px;
   left: 135px;
 }
 
@@ -1013,6 +1069,7 @@ main {
 .background .inner .about_hiwell .alarm .graph ul li {
   width: 20%;
 }
+
 .background .inner .about_hiwell .alarm .graph ul li button {
   padding: 0;
   font-size: 13px;
@@ -1051,6 +1108,9 @@ main {
   color: #44465c;
   background-color: #fff;
 }
+.background .inner .about_hiwell .alarm .graph ul li.on div {
+  display: block;
+}
 .background .inner .about_hiwell .alarm .graph ul li > div {
   width: 201px;
   height: 108px;
@@ -1058,6 +1118,7 @@ main {
   top: 12rem;
   left: 50%;
   transform: translate(-50%, 0);
+  display: none;
 }
 .background .inner .about_hiwell .alarm .graph ul li .state {
   padding-top: 75px;
@@ -1146,7 +1207,8 @@ main {
   bottom: 27.2rem;
 }
 .pr_banner2 .bx-wrapper .bx-pager.bx-default-pager {
-  top: -29.3rem;
+  position: relative;
+  top: -27rem;
   left: 13.5rem;
 }
 
@@ -1500,6 +1562,9 @@ footer p a {
   nav .favorite_wrap.inner {
     padding: 0 3%;
   }
+  .banner_wrap {
+    padding-bottom: 4.5rem;
+  }
   .banner_wrap .bx-wrapper .bx-pager.bx-default-pager {
     left: 20px;
   }
@@ -1508,6 +1573,9 @@ footer p a {
   }
   .visitor_menu {
     margin-top: 6rem;
+  }
+  .search_wrap {
+    left: 2rem;
   }
   header .bottom .inner {
     padding-left: 22rem;
@@ -1732,14 +1800,21 @@ footer p a {
   .quick_menu {
     display: none;
   }
-  footer p a {
-    display: none;
+  .banner_wrap {
+    margin-top: 4.5rem;
   }
+
   .news,
   .info,
   .quick_link {
     width: 31.8%;
     margin-left: 2.3%;
+  }
+  .background {
+    padding: 5rem 2rem 5.5rem;
+  }
+  .background .inner .hiwell_service {
+    margin-top: 4.5rem;
   }
   .background .inner .hiwell_news_wrap .info {
     padding: 38px 25px 0;
@@ -1753,10 +1828,11 @@ footer p a {
     width: 31.8%;
   }
   .background .inner .about_hiwell {
-    margin-top: 45px;
+    margin-top: 4.5rem;
   }
   .background .inner .about_hiwell .alarm {
     width: 31.8%;
+    padding: 3.3rem 2rem 0;
   }
   .background .inner .about_hiwell .about_link {
     width: 31.8%;
@@ -1785,6 +1861,9 @@ footer p a {
   }
   .background .inner .hiwell .p_title {
     margin-bottom: 2.3rem;
+  }
+  footer p a {
+    display: none;
   }
   footer .inner .footer_nav {
     flex-direction: column;

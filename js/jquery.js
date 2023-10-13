@@ -30,17 +30,72 @@ $(".gnb_inner,.favorite,.bottom inner").hover(
   }
 );
 
-//top banner
-$(".top_banner ul").bxSlider({
-  mode: "horizontal",
-  auto: true,
-  autoControls: true,
-  stopAutoOnClick: true,
-  pager: true,
-  slideWidth: "410px",
-  pagerType: "short",
-  speed: 1000,
-  pause: 5000,
+////////top banner
+const visual = $(".top_banner>ul>li");
+const prevbtn = $(".btnImg .left");
+const nextbtn = $(".btnImg .right");
+let current = 0;
+let setIntervalId;
+
+const counterEl = '<div class ="counter">1 / 1';
+$(".main_search .inner").append(counterEl);
+let conter = $(".counter");
+
+timer();
+function timer() {
+  setIntervalId = setInterval(() => {
+    let prev = visual.eq(current);
+    slideMove(prev, 0, "-410px");
+    current++;
+
+    if (current === visual.length) {
+      current = 0;
+    }
+    let next = visual.eq(current);
+
+    slideMove(next, "410px", 0);
+
+    cnt(current);
+  }, 3000);
+}
+function cnt(n) {
+  conter.html(`1 / ${n + 1}`);
+}
+
+function slideMove(tg, start, end) {
+  tg.css("left", start).stop().animate({ left: end }, 500, "easeOutCubic");
+}
+$(".top_banner,.btnImg span").on({
+  mouseover: function () {
+    clearInterval(setIntervalId);
+  },
+  mouseout: function () {
+    timer();
+  },
+});
+
+nextbtn.on("click", function () {
+  let prev = visual.eq(current);
+  slideMove(prev, 0, "-410px");
+  current++;
+  if (current === visual.length) {
+    current = 0; // 다시 0
+  }
+  let next = visual.eq(current);
+  slideMove(next, "410px", 0);
+  cnt(current);
+});
+
+prevbtn.on("click", function () {
+  let prev = visual.eq(current);
+  slideMove(prev, 0, "410px");
+  current--;
+  if (current < 0) {
+    current = visual.length - 1; // 다시 0
+  }
+  let next = visual.eq(current);
+  slideMove(next, "-410px", 0);
+  cnt(current);
 });
 
 //main banner

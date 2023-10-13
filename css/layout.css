@@ -923,9 +923,18 @@ main {
   font-size: 1.6rem;
   text-decoration: none;
 }
-.background .inner .hiwell_service .policy dl dd a p.on {
+.background .inner .hiwell_service .policy dl dd a.on p {
   transition: all 0.5s;
   font-size: 2rem;
+  font-weight: 700;
+  display: inline;
+  background-color: #fff;
+  padding: 0 20px;
+}
+
+.background .inner .hiwell_service .policy dl dd a.off p {
+  transition: all 0.5s;
+  display: inline;
 }
 
 .background .inner .hiwell_service .event_banner {

@@ -133,19 +133,19 @@ $(".icon_btn").on("click", function () {
 });
 
 //policy
-var big = $(".policy p");
+var big = $(".policy a");
 var index = -1;
 
 setInterval(function () {
   index++;
   if (index >= big.length) {
-    clearInterval();
+    index = -1;
     return;
   }
 
   $(big[index]).addClass("on");
 
   setTimeout(function () {
-    $(big[index]).removeClass("on");
-  }, 500);
-}, 1000);
+    $(big[index]).removeClass("on").addClass("off");
+  }, 800);
+}, 2000);

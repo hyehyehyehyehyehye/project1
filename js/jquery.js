@@ -131,3 +131,21 @@ $(".toggle_menu.mobile").on("click", function () {
 $(".icon_btn").on("click", function () {
   $(".overlay").removeClass("open");
 });
+
+//policy
+var big = $(".policy p");
+var index = -1;
+
+setInterval(function () {
+  index++;
+  if (index >= big.length) {
+    clearInterval();
+    return;
+  }
+
+  $(big[index]).addClass("on");
+
+  setTimeout(function () {
+    $(big[index]).removeClass("on");
+  }, 500);
+}, 1000);

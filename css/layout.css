@@ -923,6 +923,10 @@ main {
   font-size: 1.6rem;
   text-decoration: none;
 }
+.background .inner .hiwell_service .policy dl dd a p.on {
+  transition: all 0.5s;
+  font-size: 2rem;
+}
 
 .background .inner .hiwell_service .event_banner {
   width: 29.8%;
@@ -1455,9 +1459,7 @@ footer p a {
   .pr_banner2 .bx-wrapper .bx-controls-auto {
     left: 20.8rem;
   }
-  .background {
-    padding: 5rem 2rem 5.5rem;
-  }
+
   .background .inner .hiwell .customer_wrap ul li:nth-child(1) a {
     padding: 13px 15px;
   }

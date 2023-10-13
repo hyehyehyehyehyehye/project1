@@ -133,8 +133,8 @@ $(".icon_btn").on("click", function () {
 });
 
 //policy
-var big = $(".policy a");
-var index = -1;
+let big = $(".policy a");
+let index = -1;
 
 setInterval(function () {
   index++;
@@ -149,3 +149,13 @@ setInterval(function () {
     $(big[index]).removeClass("on").addClass("off");
   }, 800);
 }, 2000);
+
+//alarm 날짜
+let currentDate = new Date();
+let year = currentDate.getFullYear();
+let month = currentDate.getMonth() + 1;
+let day = currentDate.getDate();
+
+let formattedDate = year + "." + month + "." + day;
+
+$(".alarm .date").text(formattedDate);

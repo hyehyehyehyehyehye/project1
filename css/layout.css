@@ -1003,6 +1003,9 @@ main {
   color: var(--text_3);
   margin-bottom: 1.9rem;
 }
+.background .inner .about_hiwell .alarm .graph {
+  padding-top: 120px;
+}
 .background .inner .about_hiwell .alarm .graph ul {
   display: flex;
   flex-wrap: wrap;
@@ -1022,6 +1025,46 @@ main {
   height: 40px;
   color: #44465c;
   background-color: #fff;
+}
+.background .inner .about_hiwell .alarm .graph ul li:nth-child(1) button {
+  border-radius: 5px 0 0 0;
+}
+.background .inner .about_hiwell .alarm .graph ul li:nth-child(5) button {
+  border-radius: 0 5px 0 0;
+}
+.background .inner .about_hiwell .alarm .graph ul li:nth-child(6) button {
+  border-radius: 0 0 0 5px;
+}
+.background .inner .about_hiwell .alarm .graph ul li:nth-child(10) button {
+  border-radius: 0 0 5px 0;
+}
+.background .inner .about_hiwell .alarm .graph ul li button {
+  padding: 0;
+  font-size: 13px;
+  line-height: 38px;
+  line-height: 16px;
+  text-align: center;
+  border: 1px solid #ccc;
+  display: block;
+  width: 100%;
+  height: 40px;
+  color: #44465c;
+  background-color: #fff;
+}
+.background .inner .about_hiwell .alarm .graph ul li > div {
+  width: 201px;
+  height: 108px;
+  position: absolute;
+  top: 12rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.background .inner .about_hiwell .alarm .graph ul li .state {
+  padding-top: 75px;
+  text-align: center;
+}
+.background .inner .about_hiwell .alarm .graph ul li .level_img {
+  background: url(../img/bg/bg-health-noti-1.png) no-repeat;
 }
 
 .background .inner .about_hiwell .about_link {
@@ -1047,6 +1090,13 @@ main {
   display: block;
   font-size: 17px;
   font-weight: 400;
+  position: relative;
+}
+
+.background .inner .about_hiwell .about_link ul li a span img {
+  height: 24px;
+  position: absolute;
+  padding-left: 5px;
 }
 .background .inner .about_hiwell .pr_banner2 {
   width: 29.8%;

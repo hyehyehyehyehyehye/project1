@@ -17,7 +17,7 @@ $(".site_visit").click(function () {
 });
 
 //nav
-$(".gnb_inner,.favorite,.bottom inner").hover(
+$(".gnb_inner,.m_gnb_inner,.favorite,.bottom inner").hover(
   function () {
     $(".depth2_inner").css("display", "block");
     $(".favorite").css("display", "flex");
@@ -45,7 +45,7 @@ timer();
 function timer() {
   setIntervalId = setInterval(() => {
     let prev = visual.eq(current);
-    slideMove(prev, 0, "-410px");
+    slideMove(prev, 0, "-100%");
     current++;
 
     if (current === visual.length) {
@@ -53,11 +53,12 @@ function timer() {
     }
     let next = visual.eq(current);
 
-    slideMove(next, "410px", 0);
+    slideMove(next, "100%", 0);
 
     cnt(current);
   }, 3000);
 }
+
 function cnt(n) {
   conter.html(`1 / ${n + 1}`);
 }
@@ -65,6 +66,7 @@ function cnt(n) {
 function slideMove(tg, start, end) {
   tg.css("left", start).stop().animate({ left: end }, 500, "easeOutCubic");
 }
+
 $(".top_banner,.btnImg span").on({
   mouseover: function () {
     clearInterval(setIntervalId);
@@ -76,25 +78,25 @@ $(".top_banner,.btnImg span").on({
 
 nextbtn.on("click", function () {
   let prev = visual.eq(current);
-  slideMove(prev, 0, "-410px");
+  slideMove(prev, 0, "-100%");
   current++;
   if (current === visual.length) {
-    current = 0; // 다시 0
+    current = 0;
   }
   let next = visual.eq(current);
-  slideMove(next, "410px", 0);
+  slideMove(next, "100%", 0);
   cnt(current);
 });
 
 prevbtn.on("click", function () {
   let prev = visual.eq(current);
-  slideMove(prev, 0, "410px");
+  slideMove(prev, 0, "100%");
   current--;
   if (current < 0) {
-    current = visual.length - 1; // 다시 0
+    current = visual.length - 1;
   }
   let next = visual.eq(current);
-  slideMove(next, "-410px", 0);
+  slideMove(next, "-100%", 0);
   cnt(current);
 });
 
